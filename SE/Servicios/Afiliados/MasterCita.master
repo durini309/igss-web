@@ -1,0 +1,81 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterCita.master.cs" Inherits="Servicios_Afiliados_MasterCita" %>
+<%@ Register Src="../../coms/MasInformacion.ascx" TagName="MasInformacion" TagPrefix="uc1" %>
+<%@ Register Src="../../coms/Footer.ascx" TagName="Footer" TagPrefix="igss" %>
+<%@ Register Src="../../coms/LeftMenu.ascx" TagName="LeftMenu" TagPrefix="igss" %>
+<%@ Register Src="../../coms/Header.ascx" TagName="Header" TagPrefix="igss" %>
+<%@ Register Src="../../coms/InfoPaneCompact.ascx" TagName="InfoPaneCompact" TagPrefix="igss" %>
+<%@ Register Src="../../coms/Links.ascx" TagName="Links" TagPrefix="igss" %>
+<%@ Register Assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+	<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.8rc3.custom.min.js"></script>
+    <link type="text/css" href="jquery-ui-1.8rc3.custom.css" rel="stylesheet" />
+<style type="text/css">
+.messagemodalbackground	{
+	    border: solid 2 ##003da0;
+		background-color:#C0E0FC;
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+		filter: alpha(opacity=90);
+		opacity: 0.9;
+		z-index:9000;
+	}	
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../../img/spinner.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+	
+.celdaNombreCampo2{
+    background-color:#C4DBFF;	
+	padding-left:4px;
+	padding-top:3px;
+	padding-right:2px;
+	padding-bottom: 4px;
+}
+
+table.tablaDatos { background-color:#E1EDFF; }
+	table.tablaDatos tr {border: solid 1px #bad6ff; padding-top:2px; }
+	table.tablaDatos tr td { padding:3px 3px 3px 3px; }
+
+</style>
+    
+    <link rel="shortcut icon" href="http://www.igssgt.org:90/igss/images/favicon.ico" />
+    <title>Instituto Guatemalteco de Seguridad Social</title>
+
+<script type="text/javascript">
+$(window).load(function() {
+	$(".loader").fadeOut("slow");
+})
+</script>    
+</head>
+<body>
+    <form id="form1" runat="server" style="width: 100%;">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true"  EnableScriptLocalization="true" ScriptMode="Release"></asp:ScriptManager>
+        <igss:Header id="Header1" runat="server">
+        </igss:Header>
+        <div id="midArea">            
+            <div id="nomenu content">                
+                <div class="pagePath">
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                    </asp:SiteMapPath>
+                </div>
+                <div class="pageArea">
+                    <div class="pageContent">
+                        <asp:ContentPlaceHolder ID="content" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <igss:Footer ID="Footer1" runat="server" />
+    </form>
+</body>
+</html>

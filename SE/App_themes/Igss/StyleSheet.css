@@ -1,0 +1,83 @@
+﻿body 
+{
+	margin:0px; padding:0px; font-size:8pt; font-family:Tahoma; min-width:745px;
+}
+div#header
+{
+	height: 13px;
+	background-color: #D28954;
+	color: White;
+	padding: 18px 0px 18px 0px;
+	vertical-align: middle;
+	border-bottom: #e3cf3e 6px solid;
+	margin-bottom: 2px;
+}
+div#header div#headLinks
+{
+	float:right; padding-right:15px;
+}
+div#header div#date
+{
+	float:left;
+	font-weight:bold;
+	padding-left:15px;
+}
+div#infoPane
+{
+	padding-top:1px;
+	border-top:solid 1px darkgray;
+	display:block;
+}
+/*div.border
+{
+	border:solid 1px #d0d0d0;
+	padding:0px; margin:0px;
+	background-color:#efefef;
+}*/
+div.logo
+{
+	width:219px; height:219px; float:left; margin:0px; background-color:White;margin-bottom:2px;
+	border:solid 1px #d0d0d0; padding: 1px;
+}
+div.logo img
+{
+	border:solid 1px #d0d0d0;
+}
+div.bannerarea
+{
+	height:261px;
+	margin-left:225px;
+	border-left:solid 1px darkgray;
+	padding-left:2px;
+}
+div.banner
+{
+	background-color:#efefef;
+	height:100%;
+}
+div.search
+{
+	width: 207px;
+	float: left;
+	clear: both;
+	height: 20px;
+	background-color: #58a9c4;
+	padding:8px;
+	font-size:11px;
+	color:White;
+	font-weight:bold;
+	position:absolute;
+	top:284px;
+	left:0px;
+}
+div.search input
+{
+	font-family:Verdana;
+	font-size:9px;
+	width:100px;
+}
+input.goButton
+{
+	width:25px !important;
+	font-weight:normal;
+}

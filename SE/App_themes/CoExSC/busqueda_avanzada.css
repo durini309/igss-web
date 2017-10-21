@@ -1,0 +1,93 @@
+﻿div#busqueda_avanzada
+{
+	width: 590px;	
+	height: 385px;	
+	color:black;
+	text-align:center;
+	margin-top: 8px;
+	font-family: Times, "Times New Roman", serif;
+	font-size: 10pt;
+	line-height: 1.2em;	
+	border:0px solid red;
+	background-color:#C4DBFF;
+}
+
+fieldset#fieldset_busqueda
+{
+	border : 1px solid #6587C7;
+	width: 550px;	
+	height: 85px;	
+	margin-left:8px;
+}
+
+fieldset#fieldset_datos_busqueda
+{
+	border : 1px solid #6587C7;
+	width: 550px;	
+	margin-left:8px;
+}
+
+
+/* Labels para los campos de las secciones de RESIDENCIA, PERSONALES, MOTIVO ADMISION Y DATOS DE TRAUMATISMO*/
+.campo_busqueda
+{
+	color: #C6D2A2;
+	display:block;
+	font-size: 0.9em;
+	margin-left: 10px;
+	margin-top: 10px;
+	float:left;
+}
+
+.labelBusqueda
+{
+	margin-left:5px;
+}
+
+.text_busqueda
+{
+	margin-left: 10px;
+	margin-top: 5px;
+	font-size:0.8em;
+}
+
+/* Campos de textbox dentro de la seccion PERSONALES */
+fieldset#fieldset_busqueda .text_busqueda
+{
+	margin-left: 10px;
+	margin-top: 5px;
+	width:420px; 
+	font-size:0.8em;
+}
+
+/* contenedor para botones de buscar (en la seccion DATOS LABORALES) */
+fieldset#fieldset_busqueda .div_btnBuscar
+{
+	border:0px solid #6587C7;
+	width: 24px;
+	height:24px;
+	padding:0; 
+	display:inline;
+}
+
+/* boton de busqueda avanzada (dentro de la seccion DATOS LABORALES) */
+.btnBuscar
+{
+	height: 24px;
+	width: 24px;
+	margin-left: 2px;	
+	border-width:0;
+	background-color:transparent;
+	cursor:hand;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='~/Sistema/Salud/CoEx/ServiciosContratados/img/search.gif',sizingMethod='scale');
+}
+
+/* estilo para los titulos de los contenedores hijos de la pantalla de admision */
+legend.legend_child
+{
+	color: #FFFFCC;
+	margin-top: 0;
+	margin-left: 0;
+	padding-left:0;
+	font-size: 1em;
+}

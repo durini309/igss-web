@@ -1,0 +1,56 @@
+﻿body {
+}
+.grupoDatos2
+{
+    border-style:solid;
+	border-width:1px;
+	border-color:#6587C7;
+	padding-left:8px;
+	padding-top:5px;
+	padding-right:2px;
+	padding-bottom: 5px;
+}
+.etiqueta2
+{
+    padding-top:6px;
+    display:inline-block;
+    width:150px;
+}
+.etiqueta3
+{
+    display:inline-block;
+    width:115px;
+}
+
+.botonBuscar
+{
+	width:16px;
+	height:16px;
+	}
+.panelOcupacion
+{
+	display:inline;
+}
+
+.campoIngreso2
+{
+	font-size:x-small;
+}
+
+.divOcupacion
+{
+    border-style:solid;
+	border-width:1px;
+	border-color:#6587C7;
+	padding-left:8px;
+	padding-top:5px;
+	padding-right:5px;
+	padding-bottom:5px;
+	background-color:#91BDFF;
+}
+
+.txtDescOpcion2
+{
+	font-size:x-small;
+	width:140px;
+}

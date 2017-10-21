@@ -1,0 +1,154 @@
+﻿
+div#div_popup_nuevo_derechohabiente_noafiliado
+{
+	/*
+	float:left;
+	border : 2px solid #ACA899;
+	width: 510px;	
+	height: 535px;	
+	margin-left: 0px;
+	background-color:#406633;   
+*/
+}
+
+/* contenedor padre para los datos del paciente */
+fieldset#ndh_general
+{
+	float:left;
+	border : 1px solid #6587C7;
+	width: 570px;	
+	height: 360px;	
+	margin-left: 0px;
+	background-color: #C4DBFF;
+	left:100px;
+}
+
+
+/* estilo para los titulos de los contenedores hijos de la pantalla de nuevo derechohabiente */
+legend.nuevoDH_legend_child
+{
+	color: #1740AC;
+	margin-top: 0;
+	margin-left: 0;
+	padding-left:0;
+	font-size: 0.9em;
+	letter-spacing: 2px;
+}
+
+/* contenedor padre para los botones guardar y cancelar de la pantalla de nuevo derechohabiente */
+fieldset#nuevoDH_fieldset_botones
+{
+	float:left;
+	border : 1px solid #6587C7;
+	margin-left: 5px;	
+	margin-top: 8px;
+	width: 526px;	
+	height: 40px;	
+}
+
+/* contenedor hijo para los datos de residencia */
+fieldset#nDH_residencia
+{
+	float: left;
+	border : 1px solid #6587C7;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding-left: 5px;
+	width: 250px;
+	height: 231px;
+}
+
+/* contenedor hijo para los datos personales */
+fieldset#nDH_personales
+{
+	float: left;
+	border : 1px solid #6587C7;
+	margin-left: 15px;	
+	margin-top: 5px;
+	width: 255px;
+	height: 231px;
+}
+
+.nDH_campo
+{
+	display:block;
+	padding-left: 8px;
+	padding-top:5px;
+	margin-top: 5px;
+}
+
+.nDHcampo_inline
+{
+	float: left;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+/* Controles dropdown-lists para las secciones RESIDENCIA y DATOS TRAUMATISMO */
+.nuevoDH_dropDownList
+{
+	margin-left: 10px;
+	margin-top: 5px;
+	width:200px; 
+	font-size:0.9em;
+}
+
+/* Control dropdown-list para el campo Tipo ID de la seccion PERSONALES */
+.nuevoDH_dropDownList3
+{
+	margin-left: 10px; 
+	width:90px;
+	font-size:0.9em;	
+	margin-top: 5px;
+}
+
+
+/* Campos de textbox dentro de la seccion RESIDENCIA */
+fieldset#nuevoDH_fieldset_residencia .nuevoDH_textbox
+{
+		margin-left: 10px;
+		margin-top: 5px;
+		width:194px; 
+		font-size:0.9em;
+}
+
+/* Campos de textbox dentro de la seccion PERSONALES */
+fieldset#nuevoDH_fieldset_personales .nuevoDH_textbox
+{
+	margin-left: 0px;
+	margin-top: 5px;
+	width:194px; 
+	font-size:0.9em;
+}
+
+/* Controles textbox para las secciones de TRAUMATISMO. ESVIN PENDIENTE colocar
+los demas controles textbox en asp.net para que utilizen este clase de css
+*/
+.nuevoDH_textbox
+{
+	margin-left: 10px;
+	margin-top: 5px;
+	width:195px; 
+	font-size:0.9em;
+}
+
+
+/* =================================================================================
+	ESTILOS para el texto de los controles de validaciones de entrada del usuario
+   ================================================================================= */
+.lblError
+{
+	color:Lime;
+}
+
+span .nuevoDH_error_campo_formato_invalido
+{
+	display:inline-block;
+	background-image: url(../img/campo_obligatorio_16x16.png);
+	height: 16px ; 
+	width: 16px ;
+	padding: 0px;	
+	font-size: 0.9em;
+	cursor: pointer;
+	margin:0px;
+}

@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://igssgt.org/middletier/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://igssgt.org/middletier/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://igssgt.org/middletier/">
+      <s:element name="getTipoDatabase">
+        <s:complexType />
+      </s:element>
+      <s:element name="getTipoDatabaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTipoDatabaseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loadParametros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_objeto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loadParametrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loadParametrosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loadTabGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_objeto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loadTabGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loadTabGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDatabySQLbyPool">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sqlstmt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoolName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="table" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDatabySQLbyPoolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDatabySQLbyPoolResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDatabySQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sqlstmt" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="getFromDictionary" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="table" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoolDatos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDatabySQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDatabySQLResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loadListaReportes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_objeto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loadListaReportesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loadListaReportesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDatabySQLID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_objeto" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="getFromDictionary" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoolDatos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDatabySQLIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDatabySQLIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="execStoredProcedure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSQL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoolDatos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="execStoredProcedureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="execStoredProcedureResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDatabyIDReporte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_objeto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bSintaxsisCR" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDatabyIDReporteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDatabyIDReporteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDatabyID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_objeto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="condTipoAcceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoolDatos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDatabyIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDatabyIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPredicadoGranularidad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pivot_table" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPredicadoGranularidadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPredicadoGranularidadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="puedeCambiarClave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="puedeCambiarClaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="puedeCambiarClaveResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogIN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogINResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogINResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambioClave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambioClaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CambioClaveResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogOff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogOffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogOffResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarSesionUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechahora" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarSesionUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarSesionUsuarioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EjecutarDML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoolDatos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EjecutarDMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EjecutarDMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EjecutarDMLMetadatos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EjecutarDMLMetadatosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EjecutarDMLMetadatosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkOnExpand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_objeto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkOnExpandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LinkOnExpandResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="darMenuUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="esfechacierre" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="darMenuUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="darMenuUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLOV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDLOV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="params" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="use_diccionario" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoolDatos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLOVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLOVResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TienePermiso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Permiso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TienePermisoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TienePermisoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosRepMat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pGrupo" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFila" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="pColumna" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="pMonto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="pCorteMF" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="pGrupo5" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="pGrupo6" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="pObjeto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pParametros">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="PoolDatos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosRepMatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatosRepMatResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosRepDS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pObjeto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pParametros">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="PoolDatos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosRepDSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatosRepDSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveLogReporte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pObjeto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFiltro" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFinicio" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFfinal" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoolDatos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveLogReporteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveLogReporteResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DynamicTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="assemblyname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inst" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="metodo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isfunction" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="datatype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tabla" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="usar_diccionario" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="interactivo" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoolDatos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DynamicTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DynamicTransactionResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByObject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="assemblyname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inst" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="metodo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isfunction" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="datatype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tabla" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="usar_diccionario" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="interactivo" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoolDatos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByObjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataByObjectResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loadCollapseGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_objeto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loadCollapseGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loadCollapseGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EjecucionNominaMensual">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RutaNomina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RutaNominaArchivos" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intInstitucion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intMes" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intAnio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="blnEsAdicional" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EjecucionNominaMensualResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getTipoDatabaseSoapIn">
+    <wsdl:part name="parameters" element="tns:getTipoDatabase" />
+  </wsdl:message>
+  <wsdl:message name="getTipoDatabaseSoapOut">
+    <wsdl:part name="parameters" element="tns:getTipoDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="loadParametrosSoapIn">
+    <wsdl:part name="parameters" element="tns:loadParametros" />
+  </wsdl:message>
+  <wsdl:message name="loadParametrosSoapOut">
+    <wsdl:part name="parameters" element="tns:loadParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="loadTabGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:loadTabGroup" />
+  </wsdl:message>
+  <wsdl:message name="loadTabGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:loadTabGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDatabySQLbyPoolSoapIn">
+    <wsdl:part name="parameters" element="tns:getDatabySQLbyPool" />
+  </wsdl:message>
+  <wsdl:message name="getDatabySQLbyPoolSoapOut">
+    <wsdl:part name="parameters" element="tns:getDatabySQLbyPoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDatabySQLSoapIn">
+    <wsdl:part name="parameters" element="tns:getDatabySQL" />
+  </wsdl:message>
+  <wsdl:message name="getDatabySQLSoapOut">
+    <wsdl:part name="parameters" element="tns:getDatabySQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="loadListaReportesSoapIn">
+    <wsdl:part name="parameters" element="tns:loadListaReportes" />
+  </wsdl:message>
+  <wsdl:message name="loadListaReportesSoapOut">
+    <wsdl:part name="parameters" element="tns:loadListaReportesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDatabySQLIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getDatabySQLID" />
+  </wsdl:message>
+  <wsdl:message name="getDatabySQLIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getDatabySQLIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="execStoredProcedureSoapIn">
+    <wsdl:part name="parameters" element="tns:execStoredProcedure" />
+  </wsdl:message>
+  <wsdl:message name="execStoredProcedureSoapOut">
+    <wsdl:part name="parameters" element="tns:execStoredProcedureResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDatabyIDReporteSoapIn">
+    <wsdl:part name="parameters" element="tns:getDatabyIDReporte" />
+  </wsdl:message>
+  <wsdl:message name="getDatabyIDReporteSoapOut">
+    <wsdl:part name="parameters" element="tns:getDatabyIDReporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDatabyIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getDatabyID" />
+  </wsdl:message>
+  <wsdl:message name="getDatabyIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getDatabyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPredicadoGranularidadSoapIn">
+    <wsdl:part name="parameters" element="tns:getPredicadoGranularidad" />
+  </wsdl:message>
+  <wsdl:message name="getPredicadoGranularidadSoapOut">
+    <wsdl:part name="parameters" element="tns:getPredicadoGranularidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="puedeCambiarClaveSoapIn">
+    <wsdl:part name="parameters" element="tns:puedeCambiarClave" />
+  </wsdl:message>
+  <wsdl:message name="puedeCambiarClaveSoapOut">
+    <wsdl:part name="parameters" element="tns:puedeCambiarClaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogINSoapIn">
+    <wsdl:part name="parameters" element="tns:LogIN" />
+  </wsdl:message>
+  <wsdl:message name="LogINSoapOut">
+    <wsdl:part name="parameters" element="tns:LogINResponse" />
+  </wsdl:message>
+  <wsdl:message name="CambioClaveSoapIn">
+    <wsdl:part name="parameters" element="tns:CambioClave" />
+  </wsdl:message>
+  <wsdl:message name="CambioClaveSoapOut">
+    <wsdl:part name="parameters" element="tns:CambioClaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogOffSoapIn">
+    <wsdl:part name="parameters" element="tns:LogOff" />
+  </wsdl:message>
+  <wsdl:message name="LogOffSoapOut">
+    <wsdl:part name="parameters" element="tns:LogOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarSesionUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarSesionUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarSesionUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarSesionUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="EjecutarDMLSoapIn">
+    <wsdl:part name="parameters" element="tns:EjecutarDML" />
+  </wsdl:message>
+  <wsdl:message name="EjecutarDMLSoapOut">
+    <wsdl:part name="parameters" element="tns:EjecutarDMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="EjecutarDMLMetadatosSoapIn">
+    <wsdl:part name="parameters" element="tns:EjecutarDMLMetadatos" />
+  </wsdl:message>
+  <wsdl:message name="EjecutarDMLMetadatosSoapOut">
+    <wsdl:part name="parameters" element="tns:EjecutarDMLMetadatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="LinkOnExpandSoapIn">
+    <wsdl:part name="parameters" element="tns:LinkOnExpand" />
+  </wsdl:message>
+  <wsdl:message name="LinkOnExpandSoapOut">
+    <wsdl:part name="parameters" element="tns:LinkOnExpandResponse" />
+  </wsdl:message>
+  <wsdl:message name="darMenuUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:darMenuUsuario" />
+  </wsdl:message>
+  <wsdl:message name="darMenuUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:darMenuUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLOVSoapIn">
+    <wsdl:part name="parameters" element="tns:getLOV" />
+  </wsdl:message>
+  <wsdl:message name="getLOVSoapOut">
+    <wsdl:part name="parameters" element="tns:getLOVResponse" />
+  </wsdl:message>
+  <wsdl:message name="TienePermisoSoapIn">
+    <wsdl:part name="parameters" element="tns:TienePermiso" />
+  </wsdl:message>
+  <wsdl:message name="TienePermisoSoapOut">
+    <wsdl:part name="parameters" element="tns:TienePermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosRepMatSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatosRepMat" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosRepMatSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatosRepMatResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosRepDSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatosRepDS" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosRepDSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatosRepDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveLogReporteSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveLogReporte" />
+  </wsdl:message>
+  <wsdl:message name="SaveLogReporteSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveLogReporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DynamicTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:DynamicTransaction" />
+  </wsdl:message>
+  <wsdl:message name="DynamicTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:DynamicTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByObjectSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataByObject" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByObjectSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataByObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="loadCollapseGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:loadCollapseGroup" />
+  </wsdl:message>
+  <wsdl:message name="loadCollapseGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:loadCollapseGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="EjecucionNominaMensualSoapIn">
+    <wsdl:part name="parameters" element="tns:EjecucionNominaMensual" />
+  </wsdl:message>
+  <wsdl:message name="EjecucionNominaMensualSoapOut">
+    <wsdl:part name="parameters" element="tns:EjecucionNominaMensualResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsMiddleTierSoap">
+    <wsdl:operation name="getTipoDatabase">
+      <wsdl:input message="tns:getTipoDatabaseSoapIn" />
+      <wsdl:output message="tns:getTipoDatabaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="loadParametros">
+      <wsdl:input message="tns:loadParametrosSoapIn" />
+      <wsdl:output message="tns:loadParametrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="loadTabGroup">
+      <wsdl:input message="tns:loadTabGroupSoapIn" />
+      <wsdl:output message="tns:loadTabGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLbyPool">
+      <wsdl:input message="tns:getDatabySQLbyPoolSoapIn" />
+      <wsdl:output message="tns:getDatabySQLbyPoolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQL">
+      <wsdl:input message="tns:getDatabySQLSoapIn" />
+      <wsdl:output message="tns:getDatabySQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="loadListaReportes">
+      <wsdl:input message="tns:loadListaReportesSoapIn" />
+      <wsdl:output message="tns:loadListaReportesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLID">
+      <wsdl:input message="tns:getDatabySQLIDSoapIn" />
+      <wsdl:output message="tns:getDatabySQLIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="execStoredProcedure">
+      <wsdl:input message="tns:execStoredProcedureSoapIn" />
+      <wsdl:output message="tns:execStoredProcedureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyIDReporte">
+      <wsdl:input message="tns:getDatabyIDReporteSoapIn" />
+      <wsdl:output message="tns:getDatabyIDReporteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyID">
+      <wsdl:input message="tns:getDatabyIDSoapIn" />
+      <wsdl:output message="tns:getDatabyIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPredicadoGranularidad">
+      <wsdl:input message="tns:getPredicadoGranularidadSoapIn" />
+      <wsdl:output message="tns:getPredicadoGranularidadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="puedeCambiarClave">
+      <wsdl:input message="tns:puedeCambiarClaveSoapIn" />
+      <wsdl:output message="tns:puedeCambiarClaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogIN">
+      <wsdl:input message="tns:LogINSoapIn" />
+      <wsdl:output message="tns:LogINSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CambioClave">
+      <wsdl:input message="tns:CambioClaveSoapIn" />
+      <wsdl:output message="tns:CambioClaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <wsdl:input message="tns:LogOffSoapIn" />
+      <wsdl:output message="tns:LogOffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSesionUsuario">
+      <wsdl:input message="tns:ActualizarSesionUsuarioSoapIn" />
+      <wsdl:output message="tns:ActualizarSesionUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDML">
+      <wsdl:input message="tns:EjecutarDMLSoapIn" />
+      <wsdl:output message="tns:EjecutarDMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDMLMetadatos">
+      <wsdl:input message="tns:EjecutarDMLMetadatosSoapIn" />
+      <wsdl:output message="tns:EjecutarDMLMetadatosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkOnExpand">
+      <wsdl:input message="tns:LinkOnExpandSoapIn" />
+      <wsdl:output message="tns:LinkOnExpandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="darMenuUsuario">
+      <wsdl:input message="tns:darMenuUsuarioSoapIn" />
+      <wsdl:output message="tns:darMenuUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLOV">
+      <wsdl:input message="tns:getLOVSoapIn" />
+      <wsdl:output message="tns:getLOVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TienePermiso">
+      <wsdl:input message="tns:TienePermisoSoapIn" />
+      <wsdl:output message="tns:TienePermisoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosRepMat">
+      <wsdl:input message="tns:GetDatosRepMatSoapIn" />
+      <wsdl:output message="tns:GetDatosRepMatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosRepDS">
+      <wsdl:input message="tns:GetDatosRepDSSoapIn" />
+      <wsdl:output message="tns:GetDatosRepDSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveLogReporte">
+      <wsdl:input message="tns:SaveLogReporteSoapIn" />
+      <wsdl:output message="tns:SaveLogReporteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DynamicTransaction">
+      <wsdl:input message="tns:DynamicTransactionSoapIn" />
+      <wsdl:output message="tns:DynamicTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByObject">
+      <wsdl:input message="tns:GetDataByObjectSoapIn" />
+      <wsdl:output message="tns:GetDataByObjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="loadCollapseGroup">
+      <wsdl:input message="tns:loadCollapseGroupSoapIn" />
+      <wsdl:output message="tns:loadCollapseGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecucionNominaMensual">
+      <wsdl:input message="tns:EjecucionNominaMensualSoapIn" />
+      <wsdl:output message="tns:EjecucionNominaMensualSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsMiddleTierSoap" type="tns:wsMiddleTierSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getTipoDatabase">
+      <soap:operation soapAction="http://igssgt.org/middletier/getTipoDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadParametros">
+      <soap:operation soapAction="http://igssgt.org/middletier/loadParametros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadTabGroup">
+      <soap:operation soapAction="http://igssgt.org/middletier/loadTabGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLbyPool">
+      <soap:operation soapAction="http://igssgt.org/middletier/getDatabySQLbyPool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQL">
+      <soap:operation soapAction="http://igssgt.org/middletier/getDatabySQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadListaReportes">
+      <soap:operation soapAction="http://igssgt.org/middletier/loadListaReportes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLID">
+      <soap:operation soapAction="http://igssgt.org/middletier/getDatabySQLID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="execStoredProcedure">
+      <soap:operation soapAction="http://igssgt.org/middletier/execStoredProcedure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyIDReporte">
+      <soap:operation soapAction="http://igssgt.org/middletier/getDatabyIDReporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyID">
+      <soap:operation soapAction="http://igssgt.org/middletier/getDatabyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPredicadoGranularidad">
+      <soap:operation soapAction="http://igssgt.org/middletier/getPredicadoGranularidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="puedeCambiarClave">
+      <soap:operation soapAction="http://igssgt.org/middletier/puedeCambiarClave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogIN">
+      <soap:operation soapAction="http://igssgt.org/middletier/LogIN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambioClave">
+      <soap:operation soapAction="http://igssgt.org/middletier/CambioClave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <soap:operation soapAction="http://igssgt.org/middletier/LogOff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSesionUsuario">
+      <soap:operation soapAction="http://igssgt.org/middletier/ActualizarSesionUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDML">
+      <soap:operation soapAction="http://igssgt.org/middletier/EjecutarDML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDMLMetadatos">
+      <soap:operation soapAction="http://igssgt.org/middletier/EjecutarDMLMetadatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkOnExpand">
+      <soap:operation soapAction="http://igssgt.org/middletier/LinkOnExpand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="darMenuUsuario">
+      <soap:operation soapAction="http://igssgt.org/middletier/darMenuUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLOV">
+      <soap:operation soapAction="http://igssgt.org/middletier/getLOV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TienePermiso">
+      <soap:operation soapAction="http://igssgt.org/middletier/TienePermiso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosRepMat">
+      <soap:operation soapAction="http://igssgt.org/middletier/GetDatosRepMat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosRepDS">
+      <soap:operation soapAction="http://igssgt.org/middletier/GetDatosRepDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLogReporte">
+      <soap:operation soapAction="http://igssgt.org/middletier/SaveLogReporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DynamicTransaction">
+      <soap:operation soapAction="http://igssgt.org/middletier/DynamicTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByObject">
+      <soap:operation soapAction="http://igssgt.org/middletier/GetDataByObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadCollapseGroup">
+      <soap:operation soapAction="http://igssgt.org/middletier/loadCollapseGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecucionNominaMensual">
+      <soap:operation soapAction="http://igssgt.org/middletier/EjecucionNominaMensual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsMiddleTierSoap12" type="tns:wsMiddleTierSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getTipoDatabase">
+      <soap12:operation soapAction="http://igssgt.org/middletier/getTipoDatabase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadParametros">
+      <soap12:operation soapAction="http://igssgt.org/middletier/loadParametros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadTabGroup">
+      <soap12:operation soapAction="http://igssgt.org/middletier/loadTabGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLbyPool">
+      <soap12:operation soapAction="http://igssgt.org/middletier/getDatabySQLbyPool" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQL">
+      <soap12:operation soapAction="http://igssgt.org/middletier/getDatabySQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadListaReportes">
+      <soap12:operation soapAction="http://igssgt.org/middletier/loadListaReportes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLID">
+      <soap12:operation soapAction="http://igssgt.org/middletier/getDatabySQLID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="execStoredProcedure">
+      <soap12:operation soapAction="http://igssgt.org/middletier/execStoredProcedure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyIDReporte">
+      <soap12:operation soapAction="http://igssgt.org/middletier/getDatabyIDReporte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyID">
+      <soap12:operation soapAction="http://igssgt.org/middletier/getDatabyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPredicadoGranularidad">
+      <soap12:operation soapAction="http://igssgt.org/middletier/getPredicadoGranularidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="puedeCambiarClave">
+      <soap12:operation soapAction="http://igssgt.org/middletier/puedeCambiarClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogIN">
+      <soap12:operation soapAction="http://igssgt.org/middletier/LogIN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambioClave">
+      <soap12:operation soapAction="http://igssgt.org/middletier/CambioClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <soap12:operation soapAction="http://igssgt.org/middletier/LogOff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSesionUsuario">
+      <soap12:operation soapAction="http://igssgt.org/middletier/ActualizarSesionUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDML">
+      <soap12:operation soapAction="http://igssgt.org/middletier/EjecutarDML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDMLMetadatos">
+      <soap12:operation soapAction="http://igssgt.org/middletier/EjecutarDMLMetadatos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkOnExpand">
+      <soap12:operation soapAction="http://igssgt.org/middletier/LinkOnExpand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="darMenuUsuario">
+      <soap12:operation soapAction="http://igssgt.org/middletier/darMenuUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLOV">
+      <soap12:operation soapAction="http://igssgt.org/middletier/getLOV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TienePermiso">
+      <soap12:operation soapAction="http://igssgt.org/middletier/TienePermiso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosRepMat">
+      <soap12:operation soapAction="http://igssgt.org/middletier/GetDatosRepMat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosRepDS">
+      <soap12:operation soapAction="http://igssgt.org/middletier/GetDatosRepDS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLogReporte">
+      <soap12:operation soapAction="http://igssgt.org/middletier/SaveLogReporte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DynamicTransaction">
+      <soap12:operation soapAction="http://igssgt.org/middletier/DynamicTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByObject">
+      <soap12:operation soapAction="http://igssgt.org/middletier/GetDataByObject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadCollapseGroup">
+      <soap12:operation soapAction="http://igssgt.org/middletier/loadCollapseGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecucionNominaMensual">
+      <soap12:operation soapAction="http://igssgt.org/middletier/EjecucionNominaMensual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsMiddleTier">
+    <wsdl:port name="wsMiddleTierSoap" binding="tns:wsMiddleTierSoap">
+      <soap:address location="http://localhost/wsMiddleTier/wsMTService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsMiddleTierSoap12" binding="tns:wsMiddleTierSoap12">
+      <soap12:address location="http://localhost/wsMiddleTier/wsMTService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

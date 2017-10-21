@@ -1,0 +1,42 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Page.master.cs" Inherits="PageMaster" %>
+<%@ Register Src="coms/MasInformacion.ascx" TagName="MasInformacion" TagPrefix="uc1" %>
+<%@ Register Src="coms/Footer.ascx" TagName="Footer" TagPrefix="igss" %>
+<%@ Register Src="coms/LeftMenu.ascx" TagName="LeftMenu" TagPrefix="igss" %>
+<%@ Register Src="coms/Header.ascx" TagName="Header" TagPrefix="igss" %>
+<%@ Register Src="coms/InfoPane.ascx" TagName="InfoPane" TagPrefix="igss" %>
+<%@ Register Src="coms/Links.ascx" TagName="Links" TagPrefix="igss" %>
+<%--<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+--%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="description" content="Instituto Guatemalteco de Seguridad Social. En este espacio podrá encontrar información referente a los programas de cobertura, información para inscripción patronal y laboral y nuestro directorio de unidades de asistencia médica y administrativa." />
+    <meta name="keywords" content="guatemala, seguridad social, seguridad, seguro social, seguro social guatemala, seguridad social guatemala" />
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" href="http://www.igssgt.org:90/igss/images/favicon.ico" />
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <title>Instituto Guatemalteco de Seguridad Social</title>
+</head>
+<body>
+    <form id="form1" runat="server" style="width: 100%;">
+        <igss:Header id="Header1" runat="server" />        
+        <div id="midArea">
+            <igss:InfoPane ID="InfoPane1" runat="server" ShowBanner="false" ShowSearch="false" />
+            <igss:LeftMenu ID="LeftMenu1" runat="server" />
+            <div id="contentBlock">
+                <div class="pagePath">
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                    </asp:SiteMapPath>
+                </div>
+                <div class="pageArea">
+                    <div class="pageContent">
+                        <asp:ContentPlaceHolder ID="content" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>                
+            </div>            
+        </div>
+        <igss:Footer ID="Footer1" runat="server" />
+    </form>
+</body>
+</html>

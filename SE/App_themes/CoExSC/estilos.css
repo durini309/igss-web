@@ -1,0 +1,341 @@
+﻿ body
+ {
+	font-family:Tahoma;
+	min-width:700px;
+}
+
+.grupoDatos
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:#6587C7;
+	padding-left:7px;
+	padding-top:2px;
+	padding-right:7px;
+	padding-bottom: 5px;
+}
+
+legend
+{
+	color:#1740AC;
+	font-weight:bold;
+	font-family:Tahoma;
+}
+.titulo
+{
+	overflow:auto;
+	font-style:italic;
+	font-weight:bold;
+	font-family:Tahoma;
+	font-size:14pt;
+	color:#6587C7;
+	text-align:center;
+}
+td
+{
+	font-family:Tahoma;
+	padding:3 2 2 3;
+}
+.etiqueta
+{
+	padding:2 2 2 3;
+	font-family:Tahoma;
+	font-size:12px;
+	vertical-align:middle;
+}
+
+.campo
+{
+	padding:2 2 2 3;
+	font-family:Tahoma;
+	font-size:11px;
+}
+
+.textoResaltado
+{
+	font-weight:bold;
+}
+
+.datosPaciente
+{
+	font-weight:bold;
+	font-family:Arial;
+}
+
+.celdaNombreCampo
+{
+	background-color:#C4DBFF;	
+}
+
+.mensajeError
+{
+	font-weight:bold;
+	color:Red;
+}
+
+.mensajeResultado
+{
+	font-weight:bold;
+	color:Blue;
+}
+	
+	
+/*GridView SC*/	
+
+table.listadoSC { background-color:#FFFFFF; }
+	table.listadoSC tr.head th, table.datos th {background-color:#ABC7ED; padding:3px 3px 3px 3px; border: solid 1 #6587C7; color:#395DA0; }
+	table.listadoSC tr td { border: solid 1 #6587C7; padding:3px 3px 3px 3px; }
+	table.listadoSC tr.alt td { background-color: #EAF0F7; }
+	
+/* uwg */
+.uwgListados
+{
+	border-style:solid;
+	border-color:#6587C7;
+	border-width:1px;
+	font-family:MS Sans Serif;
+	font-size:8.5pt;
+	background-color:#FFFFFF;
+}
+	
+.uwgtitulo
+{
+	color:#395DA0;
+	background-color:#BDD2F2;
+	border-style:solid;
+	border-color:#6587C7;
+	border-width:1px;
+	font-weight:bold;
+}
+
+.uwgFilaSeleccionada
+{
+	background-color:#0051C0;
+	color:#FFFFFF;
+}
+
+.uwgFila
+{
+	border:solid 1 #6587C7;
+}
+
+.celdaMargen
+{
+	padding-left: 3px;
+	padding-right: 3px;
+	border-color:#6587C7;
+	border-style:solid;
+	border-width:1px;
+}
+
+
+.cuadroMenu
+{
+	color:#1740BA;
+	width:210;
+	border:solid 1 #6587C7; 
+	background-color:#E1EDFF	
+}
+
+/* Nodo menú*/
+.hoverNodo
+{
+	background-color:#BDD2F2;
+}
+
+.NodoSeleccionado
+{
+	background-color:#0051C0;
+	color:#FFFFFF;
+}
+
+.boton
+{
+	color:#FFFFFF; 
+	background: #6486C6;
+	padding-top: 0.2em;
+	height:27px;
+	margin-left: 10px;
+	margin-top:2px;
+	cursor: hand;
+	font-size: 9pt;
+	font-weight: bold;
+	font-family: MS Sans Serif;
+}
+.campoIngreso
+{
+	margin-left: 1px;
+	margin-top: 1px;
+	font-size: 1em;
+	vertical-align: middle;
+}
+
+.barraTituloPanel
+{
+	background:#6486C6 url(../../Sistema/Salud/CoEx/ServiciosContratados/img/barra_titulo.GIF);
+	height:19px;
+}
+
+.txtDescOpcion
+{
+	font-size:xx-small;
+	width:140px;
+}
+
+/* CALENDARIO */
+/*---------------------
+Estilos para la agenda
+-----------------------*/
+.dia-calendario
+{
+	font-family: Arial, "Times New Roman", Serif;
+	font-size:small;
+	border-width:thin;
+	border-style:solid;
+	border-color:#CFD8E2;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.info-dia-calendario
+{
+	font-size:xx-small;
+	font-weight:bold;
+	text-align:center;
+}
+
+.dia-otro-mes
+{
+	font-size:x-small;
+	font-style:italic;
+	color:Gray;
+	background-color:#EFEAEF;
+	text-align:center;
+	vertical-align:middle;
+	border-width:thin;
+	border-style:solid;
+	border-color:#CFD8E2
+}
+
+.dia-con-evento
+{
+	font-size:small;
+	background-color:#C7E2FC;
+	text-align:center;
+	vertical-align:middle;
+	border-width:thin;
+	border-style:solid;
+	border-color:#CFD8E2;
+}
+
+.dia-bloqueado
+{
+	font-size:small;
+	background-color:#DCE0E7;
+	text-align:center;
+	vertical-align:middle;
+	border-width:thin;
+	border-style:solid;
+	border-color:#CFD8E2;
+	color:#8D99A7;
+}
+
+.titulo-dia
+{
+	text-align:center;
+	border:double, 1px, black;
+	border-bottom-color:Black;
+	border-bottom-style:double;
+	background-color:#BDD2F2;	
+}
+
+.dia-extemporaneo
+{
+	font-size:small;
+	font-style:italic;
+	background-color:#E6F7FF;
+	text-align:center;
+	vertical-align:middle;
+	border-width:thin;
+	border-style:solid;
+	border-color:#CFD8E2;
+}
+
+/* CALENDARIO JAVASCRIPT*/
+.jsdia-con-evento
+{
+	background-color:#C7E2FC;
+}
+
+.jstitulo-dia
+{
+	background-color:#B3C8F5;	
+
+}
+
+.jstitulo-calendario
+{
+	background-color:#6486C6;
+	color:#FFFFFF;	
+	font-weight:bold;
+}
+
+.jsdia-calendario
+{
+	background-color:#FFFFFF;
+}
+
+.jsdia-bloqueado
+{
+	background-color:#DCE0E7;
+	color:#F0F0F0;
+}
+
+
+.grupoDatosAlerta
+{
+	background-color:#FFFFB0;
+	border-style:solid;
+	border-width:1px;
+	border-color:#6587C7;
+	padding-left:5px;
+	padding-top:2px;
+	padding-right:4px;
+	padding-bottom: 5px;
+	margin: 3 5 2 5;
+}
+
+.itemAlerta
+{
+	font-weight:bold;
+	font-family:Arial;
+	line-height:160%;
+}
+
+.alerta
+{
+	background-color:Yellow;	
+}
+
+.rblSiNo
+{
+	display:inline;
+	margin-right:5px;
+}
+
+.msjValidacion
+{
+	color:Red;
+	font-size:small;
+}
+
+.formSecundario
+{
+	background-color:#CADFFF; 
+	border-right: #88B8FF 3px solid; 
+	border-top: #88B8FF 1px solid; 
+	border-left: #88B8FF 1px solid; 
+	border-bottom: #88B8FF 3px solid;
+	padding: 5px 5px 5px 5px;
+	margin: 3px 3px 3px 3px;
+}

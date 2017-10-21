@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/default.aspx" title="Página Principal" seccion="false" banner="true" search="false">
+    <siteMapNode url="~/golink.aspx?id=portal" title="Portal" pie="true" seccion="true" ilink="true" />
+    <siteMapNode url="~/Descargas/Default.aspx" title="Descargas" image="~/img/descargas.jpg" seccion="true" bold="true" banner="false" search="false">
+      <siteMapNode url="~/Descargas/Recarnetizacion/PlaniIGSS.aspx" title="PlaniIGSS para Recarnetización" />
+      <siteMapNode url="~/Descargas/Planilla/PlaniIGSS.aspx" title="PlaniIGSS" />
+    </siteMapNode>
+    <!--<siteMapNode url="~/AcercaDelIGSS.aspx" title="Acerca del IGSS" seccion="false" ilink="true" />-->
+    <!--<siteMapNode url="~/Servicios/Default.aspx" title="Servicios" seccion="false" />-->
+    <!--<siteMapNode url="~/Programas/Default.aspx" title="Programas" pie="true" seccion="true" ilink="true" />-->
+    <!--<siteMapNode url="~/golink.aspx?id=programas" title="Programas" pie="true" seccion="true" ilink="true" />-->
+    <!--<siteMapNode url="~/Patronos/Default.aspx" title="Patronos" seccion="true" />-->
+    <siteMapNode url="~/golink.aspx?id=reclutamiento" title="Reclutamiento" seccion="true" ilink="true" />
+    <siteMapNode url="~/golink.aspx?id=patronos" title="Patronos" seccion="true" ilink="true" />
+    <siteMapNode url="~/golink.aspx?id=afiliados" title="Afiliados" seccion="true" ilink="true" />
+    <!--<siteMapNode url="~/Afiliados/Default.aspx" title="Afiliados" seccion="true">
+      <siteMapNode url="~/Afiliados/Requisitos/Default.aspx" title="Requisitos de Afiliación">
+        <siteMapNode url="~/Afiliados/Requisitos/CentrosAfiliacion.aspx" title="Dónde se puede afiliar" />
+        <siteMapNode url="~/Afiliados/Requisitos/Activos.aspx" title="Requisitos para trabajadores activos" />
+        <siteMapNode url="~/Afiliados/Requisitos/PensionadosIVS.aspx" title="Requisitos para pensionados IVS" />
+        <siteMapNode url="~/Afiliados/Requisitos/PensionadosCAMIP.aspx" title="Pensionados (CAMIP)" />
+      </siteMapNode>
+    </siteMapNode>-->
+    <!--<siteMapNode url="~/golink.aspx?id=cobertura" title="Cobertura" seccion="true" ilink="true" />-->
+    <siteMapNode url="~/Consultas/Default.aspx" title="Consultas" seccion="true">
+      <siteMapNode url="~/Consultas/Afiliados/Default.aspx" title="Afiliados" seccion="true">
+        <siteMapNode url="~/Consultas/Afiliados/EstadoNuevoCarnet.aspx" title="Nuevo Carné" seccion="true" />
+      </siteMapNode>
+      <siteMapNode url="~/Consultas/Patronos/Default.aspx" title="Patronos" seccion="true">
+        <siteMapNode url="~/Consultas/Patronos/ConsultaPagosPRECAPI.aspx" title="Consulta de pagos PRECAPI" seccion="true" />
+      </siteMapNode>
+      <siteMapNode url="~/Consultas/Trabajadores/Default.aspx" title="Trabajadores del IGSS" seccion="true">
+        <siteMapNode url="~/Consultas/Trabajadores/ConsultaPlan.aspx" title="Consulta de Pensión" seccion="true" />
+      </siteMapNode>
+    </siteMapNode>
+    <!--<siteMapNode url="~/Noticias/Default.aspx" title="Noticias" seccion="true" />-->
+    <!--<siteMapNode url="~/Proveedores/Default.aspx" title="Proveedores" seccion="true" />-->
+    <!--<siteMapNode url="~/golink.aspx?id=proveedores" title="Proveedores" seccion="true" />-->
+    <!--<siteMapNode url="~/RRHH/Default.aspx" title="Recursos Humanos" seccion="true" />-->
+    <!--<siteMapNode url="~/golink.aspx?id=rrhh" title="Recursos Humanos" seccion="true" />-->
+    <!--<siteMapNode url="~/Programas/Cobertura.aspx" title="Cobertura" seccion="true" />-->
+    <!--<siteMapNode url="~/Descargas/Default.aspx" title="Descargas" seccion="true" />-->
+    <!--<siteMapNode url="~/Organizacion/Default.aspx" title="Organizacion"  seccion="false"/>-->
+    <siteMapNode url="~/golink.aspx?id=organizacion" title="Organizacion" seccion="false"/>
+    <siteMapNode url="~/Vinculos.aspx" title="Vínculos" pie="true" seccion="false" />
+    <!--<siteMapNode url="~/MapaDelSitio.aspx" title="Mapa del Sitio" pie="true" seccion="true" top="true" />-->
+    <!--<siteMapNode url="~/Organizacion/Contactos.aspx" title="Contactos" pie="true" seccion="true" ilink="true" top="true" />-->
+    <siteMapNode url="~/Login.aspx" title="Ingresar" visible="false" />
+    <siteMapNode url="~/Logout.aspx" title="Salir" visible="false" />
+    <siteMapNode url="~/CompletarInscripcion.aspx" title="Completar Inscripción" visible="false" />
+    <siteMapNode url="~/NuevaClave.aspx" title="Solicitar Nueva Clave" visible="false" />
+    <siteMapNode url="~/Contactenos.aspx" title="Contactenos" visible="false" />
+    <siteMapNode url="~/servicios/Default.aspx" title="Servicios Electrónicos" seccion="true" ilink="true" >
+      <!--Fase III Servicios electronicos RUAP (no logueados)-->
+      <siteMapNode url="~/servicios/Patronos/Default.aspx" title="Patronos" seccion="true">
+		<!--Se comentó por solicitud de Byron Rivas Modernizacion el Martes 12/08/2014-->
+        <!--<siteMapNode url="~/servicios/Patronos/inscripcion_patrono/SolicitudInscripcionPatrono.aspx" title="Solicitud de Inscripción de patronos con solicitud de registro de establecimientos y contratos" seccion="true"/>-->
+        <siteMapNode url="~/servicios/Patronos/confirmacion_solicitudes/Confirmacion.aspx" title="Confirmación de solicitud patronal" seccion="true"/>
+        <siteMapNode url="~/servicios/Patronos/reprogramacion_citas/ReprogramacionCitas.aspx" title="Reprogramación de citas" seccion="true"/>
+        <siteMapNode url="~/servicios/Patronos/consulta_documentos_externos/ConsultaExternaDeDocumentos.aspx" title="Consulta Externa de Documentos" seccion="true"/>
+      </siteMapNode>
+      <siteMapNode url="~/servicios/Afiliados/Default.aspx" title="Afiliados" seccion="true">
+        <siteMapNode url="~/servicios/Afiliados/ConsultaContribuciones.aspx" title="Consulta de contribuciones" seccion="true"/>
+      </siteMapNode>
+      <!--Fin fase III Servicios electronicos RUAP (no logueados)-->
+    </siteMapNode>
+    <siteMapNode url="~/Sistema/Default.aspx" title="Servicios Electrónicos" seccion="true" visible="false" subroot="true" top="true" contextual="true">
+      <siteMapNode url="~/Admin/Default.aspx" title="Admin" image="~/img/admin.jpg">
+        <siteMapNode url="~/Admin/Autenticacion/Default.aspx" title="Autenticacion">
+          <siteMapNode url="~/Admin/Autenticacion/Grupos.aspx" title="Grupos" />
+          <siteMapNode url="~/Admin/Autenticacion/Usuarios.aspx" title="Usuarios" />
+          <siteMapNode url="~/Admin/Autenticacion/ResetPassword.aspx" title="Cambiar Clave" />
+          <siteMapNode url="~/Admin/Autenticacion/NuevosUsuariosBatch.aspx" title="Creación de Usuarios en Batch" />
+        </siteMapNode>
+        <siteMapNode url="~/Admin/ConnectionStrings/Default.aspx" title="Strings de Conexión" />
+        <siteMapNode url="~/Admin/ControlPanel.aspx" title="Panel de Control" />
+        <siteMapNode url="~/Admin/AppSettings.aspx" title="Configuración" />
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/Inspeccion/Default.aspx" title="Inspección" image="~/img/inspeccion.jpg">
+
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/ReporteSIBFA/Default.aspx" title="SIBOFA" image="~/img/sibofa.jpg">
+        <siteMapNode url="~/Sistema/ReporteSIBFA/rpt1.aspx" title="Consumo anual por dependencia en quetzales" />
+        <siteMapNode url="~/Sistema/ReporteSIBFA/rpt2.aspx" title="Consumo anual por dependencia en unidades" />
+        <siteMapNode url="~/Sistema/ReporteSIBFA/rpt3.aspx" title="Consumo anual por articulo en todas las unidades" />
+        <siteMapNode url="~/Sistema/ReporteSIBFA/rpt4.aspx" title="Consumos por servicios de recetas manuales" />
+        <siteMapNode url="~/Sistema/ReporteSIBFA/rpt5.aspx" title="Recetas despachadas por usuario" />
+        <siteMapNode url="~/Sistema/ReporteSIBFA/rpt6.aspx" title="Recetas por medicos de cabecera (CAMIP)" />
+        <siteMapNode url="~/Sistema/ReporteSIBFA/rpt7.aspx" title="Recetas generadas por medicos" />
+        <siteMapNode url="~/Sistema/ReporteSIBFA/rpt8.aspx" title="Consumo de recetas por afiliados" />
+        <siteMapNode url="~/Sistema/ReporteSIBFA/rpt9.aspx" title="Consumos maximos unidad por codigo" />
+        <siteMapNode url="~/Sistema/ReporteSIBFA/rpt10.aspx" title="Consumos de recetas por número de afiliación" />
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/Afiliados/Default.aspx" title="Afiliados" image="~/img/afiliados.jpg">
+        <siteMapNode url="~/Sistema/Afiliados/DatosGenerales.aspx" title="Datos Generales" />
+        <siteMapNode url="~/Sistema/Afiliados/MisCitas.aspx" title="Mis citas medicas" />
+        <siteMapNode url="~/Sistema/Afiliados/CuentaCorriente.aspx" title="Mi Cuenta Corriente" />
+        <siteMapNode url="~/Sistema/Afiliados/Voluntario.aspx" title="Contribuyente Voluntario" />
+        <siteMapNode url="~/Sistema/Afiliados/Beneficiarios.aspx" title="Beneficiarios" />
+        <siteMapNode url="~/Sistema/Afiliados/Beneficios.aspx" title="Beneficios" />
+        <siteMapNode url="~/Sistema/Afiliados/Historial/Default.aspx" title="Historiales">
+          <siteMapNode url="~/Sistema/Afiliados/Historial/Aportes.aspx" title="Historial de Aportes" />
+          <siteMapNode url="~/Sistema/Afiliados/Historial/Prestaciones.aspx" title="Historial de Prestaciones" />
+          <siteMapNode url="~/Sistema/Afiliados/Historial/Beneficiarios.aspx" title="Historial de Beneficiarios" />
+          <siteMapNode url="~/Sistema/Afiliados/Historial/Beneficios.aspx" title="Historial de Beneficios" />
+        </siteMapNode>
+      </siteMapNode>
+
+      <siteMapNode url="~/Servicios/Reclutamiento/GeneralPrincipal.aspx" title="Reclutamiento" image="~/img/Reclutamiento.jpg">
+        <!--<siteMapNode url="~/Sistema/Reclutamiento/InformacionGeneral.aspx" title="Información General" description="Ingrese Información General." />
+        <siteMapNode url="~/Sistema/Reclutamiento/InfoContacto.aspx" title="Información Contacto" description="Ingrese Información de Contacto." />
+        <siteMapNode url="~/Sistema/Reclutamiento/InformacionAcademica.aspx" title="Información Academica" description="Estudios de educación primaria, educación básica y diversificada." />
+        <siteMapNode url="~/Sistema/Reclutamiento/InformacionUniversitaria.aspx" title="Información Universitaria" description="Estudios universitarios." />
+        <siteMapNode url="~/Sistema/Reclutamiento/InformacionLaboral.aspx" title="Información Laboral" description="Experiencia Laboral." />-->
+      </siteMapNode>
+
+      <siteMapNode url="~/Sistema/RecursosHumanos/Default.aspx" title="Recursos Humanos" image="~/img/RRHH.jpg">
+        <siteMapNode url="~/Sistema/RecursosHumanos/Nomina/CargaDescuentos.aspx" title="Carga Descuentos" description="Carga de archivo de descuentos." />
+      </siteMapNode>
+
+      <siteMapNode url="~/Sistema/Precapi/Default.aspx" title="PRECAPI" image="~/img/precapi.jpg">
+      </siteMapNode>
+	  <!--INICIO - ADMINISTRACION DE USUARIO -->
+	  <siteMapNode url="~/Sistema/AdminUsuarios/Default.aspx" title="Administración de usuarios" image="~/img/admin_usuarios.png">
+	 	<siteMapNode url="~/Sistema/AdminUsuarios/UsuariosExternos.aspx" title="Administrar cuentas de usuarios" description="Para gestión de Planilla Electrónica o Certificado de Trabajo Electrónico." />
+	  </siteMapNode>
+	  <!--FIN - ADMINISTRACION DE USUARIO -->
+	  <!--INICIO - FILIALES -->
+	  <siteMapNode url="~/Sistema/Filiales/Default.aspx" title="Filiales" image="~/img/filial.png">
+		<siteMapNode url="~/Sistema/Filiales/Filiales.aspx" title="Crear Filial Electrónica" description="Para gestión de filiales electrónicas." />
+		<siteMapNode url="~/Sistema/Filiales/FilialesAsignacion.aspx" title="Asignar Usuarios a Filiales Electrónicas" description="Relacionar uno o varios usuarios autorizados a una filial electrónica" />
+	  </siteMapNode>
+	  <!--FIN - FILIALES -->
+      <siteMapNode url="~/Sistema/Patronos/Default.aspx" title="Patronos" image="~/img/patronos.jpg">
+        <siteMapNode url="~/Sistema/Patronos/DatosGenerales.aspx" title="Datos generales" description="Para verificar los datos generales del patrono." />
+        <siteMapNode url="~/Sistema/Patronos/PlanillaElectronica.aspx" title="Planilla Electrónica" description="Consultas y operaciones de Planillas Electrónicas de Seguridad Social.">
+          <siteMapNode url="~/Sistema/Patronos/AdhesionPatronos.aspx" title="Adhesión de patronos" description="Adhesión de patronos a planilla electrónica." />
+          <siteMapNode url="~/Sistema/Patronos/CargaPlanilla.aspx" title="Carga de planilla" description="Presentar la planilla de empleados." />
+          <siteMapNode url="~/Sistema/Patronos/Planillas/default.aspx" title="Planillas" description="Consultar planillas cargadas.">
+            <siteMapNode url="~/Sistema/Patronos/Planillas/PlanillasPendientesDePago.aspx" title="Planillas pendientes de pago" description="Listado de las planillas aceptadas, pagadas parcialmente o pendientes de pago." />
+            <siteMapNode url="~/Sistema/Patronos/Planillas/PlanillasConErrores.aspx" title="Planillas con errores" description="Listado de las planillas cargadas con errores" />
+            <siteMapNode url="~/Sistema/Patronos/Planillas/PlanillasCargadas.aspx" title="Planillas cargadas" description="Listdo de las planillas cargadas, pero pendientes de procesar" />
+            <siteMapNode url="~/Sistema/Patronos/Planillas/PlanillasPagadas.aspx" title="Planillas pagadas" description="Listado de las planillas totalmente pagadas" />
+            <siteMapNode url="~/Sistema/Patronos/Planillas/Planillas.aspx" title="Todas las planillas" description="Consulta de todas las planillas" />
+          </siteMapNode>
+          <siteMapNode url="~/Sistema/Patronos/Recibos/default.aspx" title="Recibos de pago" description="Consultas y operaciones sobre recibos de pago." >
+            <siteMapNode url="~/Sistema/Patronos/Recibos/RecibosDePago.aspx" title="Recibos de pago" description="Listado de recibos de pago, asignados al patrono" />
+            <siteMapNode url="~/Sistema/Patronos/Recibos/AnularRecibo.aspx" title="Anular recibo" description="Anular recibos pendientes de pago" />
+          </siteMapNode>
+          <siteMapNode url="~/Sistema/Patronos/PagosTransferencia/PagoTransferencia.aspx" title="Pagos por transferencia" description="Pagos por transferencia directa al Banco de Guatemala" />
+          <siteMapNode url="~/Sistema/Patronos/Rectificacion/PlanillasPagadas.aspx" title="Rectificación" description="Proceso de rectificación de planilla." />
+		  <siteMapNode url="~/Sistema/Patronos/Guatenominas/CargaPlanillaGuatenominas.aspx" title="Carga de Archivo para Transformación" description="Convierte una planilla de tipo texto a formato de Planilla Electrónica" />
+		  <siteMapNode url="~/Sistema/Patronos/Guatenominas/CargaPlanillaGuatenominasAct.aspx" title="Carga de Archivo para actualización de afiliados de guatenominas" description="Permite agregar partida y número de empleado de gobierno" />
+		  <siteMapNode url="~/Sistema/Patronos/PagoParcialDR182/CreacionRecibo.aspx" title="Pago parcial de cuota patronal" description="Permite generar recibos DR-182 con pago parcial de cuota de patronos" />
+          <!--<siteMapNode url="~/Sistema/Patronos/CertificadoTrabajo/default.aspx" title="Certificado de Trabajo" description="Gestión de Certificado de Trabajo Electrónico.">
+            <siteMapNode url="~/Sistema/Patronos/CertificadoTrabajo/ConCert.aspx" title="Gestión de Certificado de Trabajo Electrónico" description="Gestión de Certificado de Trabajo Electrónico" />
+            <siteMapNode url="~/Sistema/Patronos/CertificadoTrabajo/CT_PreDeclaracionAportes.aspx" title="Predeclaración de Aportes" description="Predeclaración de Aportes" />
+          </siteMapNode>-->
+        </siteMapNode>
+
+		<siteMapNode url="~/Sistema/Patronos/CertificadoTrabajo/default.aspx" title="Certificado de Trabajo Electrónico" description="Generación, consulta y anulación / Declaración anticipada.">
+		  <siteMapNode url="~/Sistema/Patronos/CertificadoTrabajo/ConCert.aspx" title="Generación de Certificado de Trabajo Electrónico" description="Nuevo" />
+		  <siteMapNode url="~/Sistema/Patronos/CertificadoTrabajo/Busqueda.aspx" title="Consultar / Anular" description="Certificado de Trabajo Electrónico" />
+		  <siteMapNode url="~/Sistema/Patronos/CertificadoTrabajo/CT_PreDeclaracionAportes.aspx" title="Declaración anticipada" description="Nueva" />
+		  <siteMapNode url="~/Sistema/Patronos/CertificadoTrabajo/AnularConsultarPreDeclaracionAportes.aspx" title="Consultar / Anular" description="Declaración anticipada" />
+		  <!--<siteMapNode url="~/Sistema/Patronos/CertificadoTrabajo/Busqueda.aspx" title="Consulta Gestión de Certificado de Trabajo Electrónico" description="Consulta y anulación de gestiones de Certificado de Trabajo Electrónico" />-->
+		</siteMapNode>
+		  
+        <siteMapNode url="~/Sistema/Patronos/RegistroAfiliados.aspx" title="Registro de afiliados" description="Consultas y operaciones sobre el registro de afiliados.">
+          <siteMapNode url="~/Sistema/Patronos/InscripcionTrabajadores.aspx" title="Inscripción de trabajadores" description="Inscripción de trabajadores al registro de afiliados." />
+          <!--<siteMapNode url="~/Sistema/Patronos/solicitaActualizar.aspx" title="Solicitud de actualización" description="Solicitud de actualización de datos de trabajadores." /> Modificado por Luis Castellanos el 13-11-2013-->
+          <siteMapNode url="~/Sistema/Patronos/solicitaReponer.aspx" title="Solicitud de reposición" description="Solicitud de Reposición de Carné." />
+          <siteMapNode url="~/Sistema/Patronos/ConsultaPatronAfiliado.aspx" title="Consulta de afiliados" description="Búsqueda de números de afiliación, por nombre, fecha de nacimiento, y otros." />
+          <siteMapNode url="~/Sistema/Patronos/SubeArchivo.aspx" title="Consulta masiva de afiliados" description="Validación de números de afiliación por medio de un archivo de texto." />
+        </siteMapNode>
+        <!--RUAP Fase III-->
+        <siteMapNode url="~/Sistema/Patronos/RUP/DRPT FASE III/RegistroIncidenciaPat.aspx" title="Solicitud de Registro de Incidencias y Modificaciones Patronales" description="Solicitud de incidencia patronales." />
+        <!--<siteMapNode url="~/Sistema/Patronos/RUP/DRPT FASE III/actualizacion_datos/ActualizacionDeDatos.aspx" title="Solicitud de Actualizacion de Datos" description="Solicitud de Actualizacion de Datos." /> Modificado por Luis Castellanos el 13-11-2013-->
+        <siteMapNode url="~/Sistema/Patronos/RUP/DRPT FASE III/registro_est_cont/SolicitudRegistroEstCont.aspx" title="Solicitud de Registro de Establecimiento/Contrato" description="Solicitud de registro de establecimiento/contrato" />
+        <siteMapNode url="~/Sistema/Patronos/RUP/DRPT FASE III/solicitud_documentos/Solicitud_DocumentosPat.aspx" title="Solicitud de documentos patronales" description="Solicitud de documentos patronales" />
+        <siteMapNode url="~/Sistema/Patronos/RUP/DRPT FASE III/reprogramacion_citas/ReprogramacionCitas.aspx" title="Reprogramacion de citas" description="Reprogramacion de citas" />
+        <!--Fin RUAP FaseIII-->
+
+        <!--INICIO - DARP -->
+        <siteMapNode url="~/Sistema/Patronos/DARP/ActualizacionDARP.aspx" title="Actualización Empleadores" description="Actualización de datos de empleadores." />
+        <!--FIN - DARP-->		
+		
+        <!--INSPECCIONES RUP FASE I 
+        <siteMapNode url="~/Sistema/Patronos/RUP/Inspeccion/DRPT/RegistroInspeccion.aspx" title="Ingreso de Actas/Inspeccion" description="Ingreso de actas/inspecciones." />
+        <siteMapNode url="~/Sistema/Patronos/RUP/Inspeccion/DRPT/ModificacionRegistroInspeccion.aspx" title="Revisión de Actas/Inspeccion" description="Revisión y Corrección de Actas e Informes de Inspección." />-->
+      </siteMapNode>
+
+
+
+
+      <!--INICIO - Servicios electrónicos publicados COEX-->
+      <siteMapNode url="~/Sistema/Salud/CoEx/Default.aspx" title="Salud" image="~/img/salud.jpg">
+        <siteMapNode url="~/Sistema/Salud/CoEx/DashBoard/MRI.aspx" title="Dashboard" description="Indicadores de desempeño de Consulta Externa." />
+        <siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/Default.aspx" title="Consulta Externa" description="Atención de Consulta Externa por Médicos Contratados.">
+          <siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/frmAgenda.aspx" title="Agenda de citas" description="Citas pendientes de atender" />
+          <siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/frmListadoAtendidas.aspx" title="Consulta atendidas" description="Consultas modificables" />
+          <siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/frmConsultarHistorial.aspx" title="Historial de consultas" description="Historial de consultas atendidas" />
+          <siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/frmReportes.aspx" title="Reportes" description="Reportes" />
+          <siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/frmRecetasPendientesODEMPA.aspx" title="Recetas pendientes" description="Recetas pendientes de generar" />
+          <siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/frmCasosAbiertos.aspx" title="Casos abiertos" description="Listado de casos abiertos, con la fecha de la última cita programada" />
+          <siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/frmCargarConsultas.aspx" title="Carga de consultas" description="Carga de archivos con consultas registradas no en línea" />
+        </siteMapNode>
+		<siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/EH/Menu.aspx" title="Emergencia y Hospitalización" description="Registro de la atención de Emergencia y Hospitalización.">
+			<siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/EH/frmListadoPacientes.aspx" title="Listado de pacientes referidos" description="Listado de pacientes en atención" />
+			<siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/EH/frmPacienteNoRegistrado.aspx" title="Registro de pacientes" description="Registro de pacientes" />
+			<siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/EH/frmListadoFinalizadas.aspx" title="Revisión de atenciones finalizadas" description="Revisión de atenciones finalizadas" />
+			<siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/EH/frmImpresionDocs.aspx" title="Impresión de formularios" description="Impresión de formularios de pacientes" />
+			<siteMapNode url="~/Sistema/Salud/CoEx/ServiciosContratados/EH/frmAsociarMedico.aspx" title="Asociar médico" description="Asociar a un usuario con los datos de un médico" />
+		</siteMapNode>
+	  </siteMapNode>
+      <!--FIN - Servicios electrónicos publicados COEX-->
+
+	<!--INICIO - SIGEP -->
+      <siteMapNode url="~/Sistema/SIGEP/Menu.aspx" title="SIGEP" image="~/img/spyd.jpg">
+        <siteMapNode url="~/Sistema/SIGEP/Infraestructura/Menu.aspx" title="Proyectos de Infraestructura" description="Seguimiento de proyectos de infraestructura">
+          <siteMapNode url="~/Sistema/SIGEP/Infraestructura/Proyecto.aspx" title="Registro de proyectos" description="Registro de la información general de proyectos"></siteMapNode>
+          <siteMapNode url="~/Sistema/SIGEP/Infraestructura/GrupoProyecto.aspx" title="Catálogo de proyectos generales" description="Catálogos de los proyectos generales"></siteMapNode>
+          <siteMapNode url="~/Sistema/SIGEP/Infraestructura/Informe.aspx" title="Informe de avances" description="Registro de informes de avance">
+            <siteMapNode url="~/Sistema/SIGEP/Infraestructura/AvanceFisico.aspx" title="Avance físico" description="Avance físico"></siteMapNode>
+            <siteMapNode url="~/Sistema/SIGEP/Infraestructura/AvanceFinanciero.aspx" title="Avance financiero" description="Avance financiero"></siteMapNode>
+            <siteMapNode url="~/Sistema/SIGEP/Infraestructura/AvanceCualitativo.aspx" title="Avance cualitativo" description="Avance cualitativo"></siteMapNode>
+          </siteMapNode>
+        </siteMapNode>
+      </siteMapNode>
+      <!--FIN - SIGEP -->
+
+      <!--INICIO - Salud  Solicitado por Edgar Castellanos 28/07/2014-->
+      <siteMapNode url="~/Sistema/Salud/Informacion/Menu.aspx" title="INFORMACIÓN" image="~/Sistema/Salud/Informacion/img/Cubo_Infomacion.jpg">
+          <siteMapNode url="~/Sistema/Salud/Informacion/Infraestructura.aspx" title="Informe de Infraestructura" description="Informe de Infraestructura"></siteMapNode>
+          <siteMapNode url="~/Sistema/Salud/Informacion/InfoGeneral.aspx" title="Información General" description="Información General"></siteMapNode>
+          <siteMapNode url="~/Sistema/Salud/Informacion/MobiliarioyEquipo.aspx" title="Informe de Mobiliario y equipo" description="Registro de informes de Mobiliario y equipo"></siteMapNode>
+          <siteMapNode url="~/Sistema/Salud/Informacion/RecursoHumano.aspx" title="Informe de Recursos humanos" description="Registro de informes de Recursos humanos"></siteMapNode>
+          <siteMapNode url="~/Sistema/Salud/Informacion/Costos.aspx" title="Informe de costos" description="Registro de informes de costos"></siteMapNode>
+		  <!--Solicitado por Edgar Castellanos 01/10/2014-->
+		  <siteMapNode url="~/Sistema/Salud/Informacion/InfoGeneral_temp.aspx" title="Registro Temporal" description="Registro Temporal"></siteMapNode>		  
+      </siteMapNode>
+      <!--FIN - Salud  Solicitado por Edgar Castellanos 28/07/2014-->
+	  
+	  
+      <siteMapNode url="~/Sistema/Proveedores/Default.aspx" title="Proveedores" image="~/img/proveedor.jpg">
+        <siteMapNode url="~/Sistema/Proveedores/Facturas.aspx" title="Facturas" />
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/Medicos/Default.aspx" title="Ayuda" image="~/img/medicos.jpg">
+        <siteMapNode url="~/Sistema/Medicos/RecetaElectronica/Default.aspx" title="Receta Electrónica">
+          <siteMapNode url="~/Sistema/Medicos/RecetaElectronica/NuevaReceta.aspx" title="Ingreso y Anulación de Receta Electrónica" />
+        </siteMapNode>
+      </siteMapNode>
+
+      <!--INICIO - HEMODIALISIS LCASTELLANOS 07-11-2013 -->
+      <siteMapNode url="~/Sistema/Hemodialisis/Default.aspx" title="Hemodialisis" image="~/img/Hemodialisis.png">
+        <siteMapNode url="~/Sistema/Hemodialisis/Consultas/Default.aspx" title="Consultas" description="Consultas varias">
+          <siteMapNode url="~/Sistema/Hemodialisis/Consultas/RegistroHuella.aspx" title="Consultas"  description="Registro de Huellas" />
+          <siteMapNode url="~/Sistema/Hemodialisis/Consultas/RegistroSPS465.aspx" title="Consultas"  description="Registro SPS 465" />
+          <siteMapNode url="~/Sistema/Hemodialisis/Consultas/SeleccionarBeneficiario.aspx" title="Consultas"  description="Selección de Beneficio" />
+          <siteMapNode url="~/Sistema/Hemodialisis/Consultas/ValidaHuella.aspx" title="Consultas"  description="Valida huellas" />
+        </siteMapNode>
+      </siteMapNode>
+      <!--FIN - HEMODIALISIS LCASTELLANOS 07-11-2013 -->
+
+      <!--INICIO - ASISTENCIA HEMODIALISIS ROrozco 20-08-2015 -->
+      <!--A SOLICITUD DE MIGUEL BATZ -->
+      <siteMapNode url="~/Sistema/AsistenciaHemodialisis/Default.aspx" title="Hemodialisis" image="~/img/asistenciahuella.png">
+        <siteMapNode url="~/Sistema/AsistenciaHemodialisis/Registro/AsistenciaSPS465.aspx" title="Consultas" description="Asistencia Hemodialisis">
+        </siteMapNode>
+      </siteMapNode>
+      <!--FIN - ASISTENCIA HEMODIALISIS ROrozco 20-08-2015 -->
+
+
+      <siteMapNode url="~/Sistema/Recaudacion/Default.aspx" title="Recaudación" image="~/img/recaudacion.jpg">
+        <!--Agregamos nuevo menu elinares y csermeno-->
+        <!--<siteMapNode url="~/Sistema/Recaudacion/Recaudacion/Default.aspx" title="Recaudación" description="Información relacionada con la deuda que las Municipalidades y el Sector Privado y Público tienen con el IGSS."/>-->
+        <!--<siteMapNode url="~/Sistema/Recaudacion/Recaudacion/Default.aspx" title="Acuerdo XX" description="Propuesta para la recuperación del adeudo de las Municipalidades y del Sector Privado y Público, con el Instituto Guatemalteco de Seguridad Social."/>-->
+        <siteMapNode url="~/Sistema/Recaudacion/Recaudacion/Default.aspx" title="Barómetro Exoneración 100% de Recargos" description="Información relacionada con la deuda que las Municipalidades, el Sector Público y Privado tienen con el IGSS."/>
+        <siteMapNode url="~/Sistema/Recaudacion/Reportes/Default.aspx" title="Reportes Recaudación" description="Información requerida para el Informe Gerencial en el SIRG y en Servicios Electronicos Recaudación.">
+          <siteMapNode url="~/Sistema/Recaudacion/Reportes/rpt1.aspx" title="Reportes"  description="Informe sobre la recaudación sobre contribuciones." />
+          <siteMapNode url="~/Sistema/Recaudacion/Reportes/rpt2.aspx" title="Reportes"  description="Informe sobre la recaudación a cuenta de terceros." />
+          <siteMapNode url="~/Sistema/Recaudacion/Reportes/rpt3.aspx" title="Reportes"  description="Informe sobre la Rebaja del 50% sobre los recargos 'Aplicación del Acuerdo 1200 de Junta Directiva'." />
+        </siteMapNode>
+        <!--Agregamos nuevo menu elinares y csermeno-->
+      </siteMapNode>
+
+      <siteMapNode url="~/Sistema/Legal/Default.aspx" title="Legal" image="~/img/legal.jpg">
+        <siteMapNode url="~/Sistema/Legal/Mandatarios_IngresoGestiones.aspx" title="Ingreso de gestiones" description="Registro de las gestiones realizadas sobre certificaciones o demandas." />
+        <siteMapNode url="~/Sistema/Legal/Documentos/GUIA PARA INGRESO DE GESTIONES.pdf" title="Guía para ingreso de gestiones" description="Documento guía para ingreso de gestiones." />
+        <siteMapNode url="~/Sistema/Legal/Mandatarios_Reporte.aspx" title="Informe de gestiones realizadas" description="Muestra la información detallada de las gestiones realizadas en cada certificación de gerencia asignada." />
+      </siteMapNode>
+
+      <siteMapNode url="~/Sistema/Inversiones/SCP/MenuInicio.aspx" title="Deuda Por Devengar" image="~/img/deudaxdevengar.jpg">
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/MAT/ReportesGerencialesTesoreria.aspx" title="Modulo de Apoyo a Tesorería" image="~/img/mat.jpg">
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/LBTR/MenuInicio.aspx" title="Proyecto LBTR" image="~/img/lbtr.jpg">
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/Inversiones/Default.aspx" title="Inversiones" image="~/img/inversiones.jpg">
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/SEP/DefaultP.aspx" title="Presupuesto" image="~/img/presupuesto.jpg">
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/Tesoreria/ReportesIngresos.aspx" title="Tesoreria" image="~/img/Tesoreria.jpg">
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/SAFI/pantallaPrincipal.aspx" title="Fallas e Incidencias" image="~/img/safi.jpg">
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/SIBFA/Menu.aspx" title="Inventario de medicamentos" image="~/img/areamedica.jpg">
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/MDA/Menu.aspx" title="Modulo de Adquisiciones" image="~/img/mda.jpg">
+      </siteMapNode>
+      <!--<siteMapNode url="~/Sistema/SIBFA/Desabilitada.aspx" title="Inventario de medicamentos" image="~/img/SIBFA.png">
+      </siteMapNode> -->
+
+      <siteMapNode url="~/Sistema/Compras/Menu.aspx" title="Modulo de compras" image="~/img/dab6.jpg">
+      </siteMapNode>
+
+      <siteMapNode url="~/Sistema/Descargas/Default.aspx" title="Descargas" image="~/img/descargas.jpg" >
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/Reportes/Default.aspx" title="Reportes Servicios Electrónicos" image="~/img/reportes.jpg" >
+      </siteMapNode>
+      <siteMapNode url="~/Ayuda/Default.aspx" title="Ayuda" image="~/img/ayuda.jpg">
+        <siteMapNode url="~/Ayuda/UsoServiciosElectronicos.aspx" title="Uso Servicios Electrónicos" image="~/img/ayuda.jpg" />
+      </siteMapNode>
+      <siteMapNode url="~/Sistema/CambiarPregunta.aspx" title="Cambiar Pregunta y Respuesta" visible="false" />
+      <siteMapNode url="~/Sistema/CambiarClave.aspx" title="Cambiar Clave" visible="false" />
+      <siteMapNode url="~/Sistema/CambiarCorreo.aspx" title="Cambiar Correo Electrónico" visible="false" />
+    </siteMapNode>
+
+  </siteMapNode>
+</siteMap>
