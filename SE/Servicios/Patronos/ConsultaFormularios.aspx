@@ -58,7 +58,7 @@ $(document).ready(function() {
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="lblNumIdentificacion" runat="server" Text="Número de identificación: "></asp:Label></td>
+                    <asp:Label ID="lblNumIdentificacion" runat="server" Text="Número de identificación del afiliado: "></asp:Label></td>
                 <td>
                     <asp:TextBox ID="txtNumAfiliado" runat="server" MaxLength="12"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="revNumAfiliado" runat="server" ControlToValidate="txtNumAfiliado"
