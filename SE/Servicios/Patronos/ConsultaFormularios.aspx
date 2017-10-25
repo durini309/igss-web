@@ -68,6 +68,13 @@ $(document).ready(function() {
                 </td>
             </tr>
             <tr>
+                    <td>
+                            <asp:TextBox ID="txtSede" runat="server" MaxLength="12"></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="revSede" runat="server" ControlToValidate="txtNumAfiliado"
+                                ValidationExpression="^[0-9]+$" ErrorMessage="Dato inválido" Display="Dynamic"></asp:RegularExpressionValidator>
+                            <asp:RequiredFieldValidator ID="reqvSede" runat="server" ControlToValidate="txtNumAfiliado"
+                                ErrorMessage="Dato requerido" Display="Dynamic"></asp:RequiredFieldValidator>
+                        </td>
                 <td>
                     <asp:Label ID="lblSedes" runat="server" Text="Sede:"></asp:Label></td>
                 <td>

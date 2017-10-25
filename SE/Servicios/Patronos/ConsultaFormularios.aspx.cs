@@ -109,5 +109,14 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
         ScriptManager.RegisterStartupScript(this, GetType(),
                               "ServerControlScript", script, true);
     }
+
+    [WebMethod]
+    public static string[] GetCountryNames(string keyword)
+    {
+        List<string> country = new List<string>();  
+        country.Add("Zona 2");
+        country.Add("Zona 3");
+        return country.ToArray();
+    }
     #endregion
 }
