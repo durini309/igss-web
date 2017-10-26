@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Services;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
@@ -29,7 +30,7 @@ public partial class Servicios_Afiliados_ConsultaCitas : System.Web.UI.Page
     /// <param name="e"></param>
     protected void btnConsultar_Click(object sender, EventArgs e)
     {
-        string sedeSeleccionada     = ddlSedes.SelectedValue;
+        string sedeSeleccionada     = txtSede.Text;
         string numeroIdentificacion = txtNumAfiliado.Text;
         consultaCita(sedeSeleccionada, numeroIdentificacion);
     }
@@ -42,7 +43,7 @@ public partial class Servicios_Afiliados_ConsultaCitas : System.Web.UI.Page
     protected void btnLimpiar_Click(object sender, EventArgs e)
     {
         txtNumAfiliado.Text = "";
-        ddlSedes.SelectedIndex = 0;
+        txtSede.Text = "";
         lblNombreAfiliado.Text = "";
         pnlCitas.Visible = false;
         gridCitas.DataSource = null;
@@ -101,6 +102,16 @@ public partial class Servicios_Afiliados_ConsultaCitas : System.Web.UI.Page
         dataTable.Rows.Add("2017-10-27", "IGSS zona 6", "Juan Carlos Durini", "MEga 6");
         dataDummie.Tables.Add(dataTable);
         return dataDummie;
+    }
+
+    [WebMethod(EnableSession = true)]
+    public static string[] GetSedes(string keyword)
+    {
+        //Falta llamada para obtener sedes del servicio WS
+        List<string> sede = new List<string>();
+        sede.Add("Zona 2");
+        sede.Add("Zona 3");
+        return sede.ToArray();
     }
     #endregion
 }

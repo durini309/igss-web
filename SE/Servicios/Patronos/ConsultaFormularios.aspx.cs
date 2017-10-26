@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Services;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
@@ -35,7 +36,7 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
         }
         else
         {
-            string sedeSeleccionada = ddlSedes.SelectedValue;
+            string sedeSeleccionada = txtSede.Text;
             string formularioSeleccionado = ddlFormulario.SelectedValue;
             string numeroFormulario = txtNumFormulario.Text;
             string numeroIdentificacion = txtNumAfiliado.Text;
@@ -53,7 +54,7 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
     {
         txtNumAfiliado.Text = "";
         txtNumFormulario.Text = "";
-        ddlSedes.SelectedIndex = 0;
+        txtSede.Text = "";
         ddlFormulario.SelectedIndex = 0;
         dtFecha.SelectedDate = DateTime.Now;
         pnlFormulario.Visible = false;
@@ -110,13 +111,14 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
                               "ServerControlScript", script, true);
     }
 
-    [WebMethod]
-    public static string[] GetCountryNames(string keyword)
+    [WebMethod(EnableSession = true)]
+    public static string[] GetSedes(string keyword)
     {
-        List<string> country = new List<string>();  
-        country.Add("Zona 2");
-        country.Add("Zona 3");
-        return country.ToArray();
+        //Falta llamada para obtener sedes del servicio WS
+        List<string> sede = new List<string>();
+        sede.Add("Zona 2");
+        sede.Add("Zona 3");
+        return sede.ToArray();
     }
     #endregion
 }

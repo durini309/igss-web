@@ -4,21 +4,38 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="content" runat="Server">
 
     <script type="text/javascript">
-$(document).ready(function() {
-        $.ajax({  
-            type: "POST",  
-            url: "ConsultaFormularios.aspx/obtieneSedes",   
-            dataType: "json",  
-            contentType: "application/json",  
-            success: function(data) {  
-                console.log(data);
-            },  
-            error: function(XMLHttpRequest, textStatus, errorThrown) {  
-                console.log(XMLHttpRequest);  
-            }  
+$(function () {
+        $("[id$=txtSede]").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '<%=ResolveUrl("~/Servicios/Patronos/ConsultaFormularios.aspx/GetSedes") %>',
+                    data: "{ 'keyword': '" + request.term + "'}",
+                    dataType: "json",
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        response($.map(data.d, function (item) {
+                            return {
+                                label: item.split('-')[0],
+                                val: item.split('-')[1]
+                            }
+                        }))
+                    },
+                    error: function (response) {
+                        alert(response.responseText);
+                    },
+                    failure: function (response) {
+                        alert(response.responseText);
+                    }
+                });
+            },
+            select: function (e, i) {
+                $("[id$=hfCustomerId]").val(i.item.val);
+            },
+            minLength: 1
         });
-}); 
-</script>
+    });  
+    </script>
 
     <h1>
         Validación de Formularios</h1>
@@ -68,14 +85,17 @@ $(document).ready(function() {
                 </td>
             </tr>
             <tr>
-                    <td>
-                            <asp:TextBox ID="txtSede" runat="server" MaxLength="12"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="revSede" runat="server" ControlToValidate="txtNumAfiliado"
-                                ValidationExpression="^[0-9]+$" ErrorMessage="Dato inválido" Display="Dynamic"></asp:RegularExpressionValidator>
-                            <asp:RequiredFieldValidator ID="reqvSede" runat="server" ControlToValidate="txtNumAfiliado"
-                                ErrorMessage="Dato requerido" Display="Dynamic"></asp:RequiredFieldValidator>
-                        </td>
                 <td>
+                    <asp:Label ID="lblSedes" runat="server" Text="Sede: "></asp:Label></td>
+                <asp:HiddenField ID="hfCustomerId" runat="server" />
+                <td>
+                    <asp:TextBox ID="txtSede" runat="server" MaxLength="12"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revSede" runat="server" ControlToValidate="txtNumAfiliado"
+                        ValidationExpression="^[0-9]+$" ErrorMessage="Dato inválido" Display="Dynamic"></asp:RegularExpressionValidator>
+                    <asp:RequiredFieldValidator ID="reqvSede" runat="server" ControlToValidate="txtNumAfiliado"
+                        ErrorMessage="Dato requerido" Display="Dynamic"></asp:RequiredFieldValidator>
+                </td>
+                <%-- <td>
                     <asp:Label ID="lblSedes" runat="server" Text="Sede:"></asp:Label></td>
                 <td>
                     <asp:DropDownList ID="ddlSedes" runat="server" Width="173px">
@@ -83,7 +103,7 @@ $(document).ready(function() {
                         <asp:ListItem Text="Zona 5" Value="z5"></asp:ListItem>
                         <asp:ListItem Text="Zona 6" Value="z6"></asp:ListItem>
                     </asp:DropDownList>
-                </td>
+                </td>--%>
             </tr>
             <tr>
                 <td>
