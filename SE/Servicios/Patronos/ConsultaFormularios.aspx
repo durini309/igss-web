@@ -110,8 +110,6 @@ $(function () {
                     <asp:Label ID="lblFormularios" runat="server" Text="Tipo de formulario:"></asp:Label></td>
                 <td>
                     <asp:DropDownList ID="ddlFormulario" runat="server" Width="173px">
-                        <asp:ListItem Text="SPS-58" Value="58"></asp:ListItem>
-                        <asp:ListItem Text="SPS-59" Value="59"></asp:ListItem>
                         <asp:ListItem Text="SPS-60" Value="60"></asp:ListItem>
                         <asp:ListItem Text="SPS-231" Value="231"></asp:ListItem>
                     </asp:DropDownList>
