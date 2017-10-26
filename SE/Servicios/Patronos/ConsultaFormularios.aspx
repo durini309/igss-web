@@ -75,7 +75,7 @@ $(function () {
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="lblNumIdentificacion" runat="server" Text="Número de identificación del afiliado: "></asp:Label></td>
+                    <asp:Label ID="lblNumIdentificacion" runat="server" Text="Número de afiliación: "></asp:Label></td>
                 <td>
                     <asp:TextBox ID="txtNumAfiliado" runat="server" MaxLength="12"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="revNumAfiliado" runat="server" ControlToValidate="txtNumAfiliado"
@@ -86,7 +86,7 @@ $(function () {
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="lblSedes" runat="server" Text="Sede: "></asp:Label></td>
+                    <asp:Label ID="lblSedes" runat="server" Text="Unidad Médica: "></asp:Label></td>
                 <asp:HiddenField ID="hfCustomerId" runat="server" />
                 <td>
                     <asp:TextBox ID="txtSede" runat="server" MaxLength="12"></asp:TextBox>
@@ -96,7 +96,7 @@ $(function () {
                         ErrorMessage="Dato requerido" Display="Dynamic"></asp:RequiredFieldValidator>
                 </td>
                 <%-- <td>
-                    <asp:Label ID="lblSedes" runat="server" Text="Sede:"></asp:Label></td>
+                    <asp:Label ID="lblSedes" runat="server" Text="Unidad Médica:"></asp:Label></td>
                 <td>
                     <asp:DropDownList ID="ddlSedes" runat="server" Width="173px">
                         <asp:ListItem Text="Zona 1" Value="z1"></asp:ListItem>
