@@ -10,11 +10,12 @@ using System.Web.Services;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
+using org.igssgt.pruebas;
 
 public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Page
 {
-    private static string WS_ID = "jdurini";
-    private static string WS_PASSWORD = "lorem";
+    private static string WS_ID = "usr_consulta_citas_ws";
+    private static string WS_PASSWORD = "psw_consulta_citas_ws";
 
     #region Listeners
 
@@ -36,12 +37,12 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
         }
         else
         {
-            string sedeSeleccionada = txtSede.Text;
+            string sedeSeleccionada = codigoSede.Value;
             string formularioSeleccionado = ddlFormulario.SelectedValue;
             string numeroFormulario = txtNumFormulario.Text;
             string numeroIdentificacion = txtNumAfiliado.Text;
             string fechaFormulario = dtFecha.SelectedDate.ToString("dd/MM/yyyy");
-            consultaFormulario(sedeSeleccionada, formularioSeleccionado, numeroFormulario, numeroIdentificacion, fechaFormulario);
+            consultaFormulario(sedeSeleccionada, numeroFormulario, fechaFormulario, numeroIdentificacion, formularioSeleccionado);
         }
     }
 
@@ -77,16 +78,21 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
     /// <param name="tipoForm">ID de tipo de formulario seleccionado</param>
     /// <param name="numForm">ID de formulario</param>
     /// <param name="numID">Numero de identificación del usuario</param>
-    private void consultaFormulario(string sede, string tipoForm, string numForm, string numID, string fechaForm)
+    private void consultaFormulario(string sede, string numForm, string fechaForm, string numId, string tipoForm)
     {
         // lógica de llamada del WS
-        DataSet resultado = formularioDummie(
-            sede,
-            tipoForm,
-            numForm,
-            numID,
-            fechaForm
-        );
+        WSMediConsulta ws = new WSMediConsulta();
+        Boolean existe = ws.ExisteFormulario(numForm, sede, fechaForm, numId, tipoForm, WS_ID, WS_PASSWORD);
+        DataSet resultado = null;
+
+        if (existe)
+        {
+            resultado = formularioExitoso();
+        }
+        else
+        {
+            resultado = formularioNoExitoso();
+        }
 
         // Actualizamos datagrid y mostramos panel
         gridFormulario.DataSource = resultado;
@@ -94,12 +100,22 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
         pnlFormulario.Visible = true;
     }
 
-    private DataSet formularioDummie(string sede, string tipoFormulario, string numeroFormulario, string numID, string fechaSel)
+    private DataSet formularioExitoso()
     {
         DataSet dataDummie = new DataSet();
         DataTable dataTable = new DataTable();
         dataTable.Columns.Add("RESULTADO");
         dataTable.Rows.Add("Documento validado exitosamente, fue emitido por el IGSS");
+        dataDummie.Tables.Add(dataTable);
+        return dataDummie;
+    }
+
+    private DataSet formularioNoExitoso()
+    {
+        DataSet dataDummie = new DataSet();
+        DataTable dataTable = new DataTable();
+        dataTable.Columns.Add("RESULTADO");
+        dataTable.Rows.Add("Documento falso, no fue emitido por el IGSS");
         dataDummie.Tables.Add(dataTable);
         return dataDummie;
     }
@@ -111,14 +127,34 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
                               "ServerControlScript", script, true);
     }
 
-    [WebMethod(EnableSession = true)]
-    public static string[] GetSedes(string keyword)
+    public static string convertSedesToJson(DataRowCollection rows)
     {
-        //Falta llamada para obtener sedes del servicio WS
-        List<string> sede = new List<string>();
-        sede.Add("Zona 2");
-        sede.Add("Zona 3");
-        return sede.ToArray();
+        string jsonFinal = "";
+        string jsonObjectBase = "{\"value\": \"{0}\", \"label\":\"{1}\"}";
+        string jsonObjectActual;
+        if (rows.Count > 0)
+        {
+            int a = 10;
+            foreach (DataRow row in rows)
+            {
+                jsonObjectActual = jsonObjectBase.Replace("{0}", row[0].ToString()).Replace("{1}", row[1].ToString());
+                jsonFinal += jsonObjectActual + ",";
+            }
+
+            jsonFinal = "[" + jsonFinal.Substring(0, jsonFinal.Length - 1) + "]";
+        }
+
+        return jsonFinal;
+    }
+
+    [WebMethod(EnableSession = true)]
+    public static string GetSedes()
+    {
+        WSMediConsulta ws = new WSMediConsulta();
+        DataSet datos = ws.DatosUnidades(WS_ID, WS_PASSWORD);
+        string sedes = convertSedesToJson(datos.Tables[0].Rows);
+
+        return sedes;
     }
     #endregion
 }
