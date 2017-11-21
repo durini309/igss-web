@@ -91,10 +91,9 @@ public partial class Servicios_Afiliados_ConsultaCitas : System.Web.UI.Page
     {
         DataSet dataToReturn = new DataSet();
         WSMediConsulta ws = new WSMediConsulta();
-        DataSet datos = ws.DatosCitas(numID, sede, WS_ID, WS_PASSWORD);
-        int columnCount = datos.Tables[0].Columns.Count;
+        DataSet datos = ws.DatosCitas(numID, sede, WS_ID, WS_PASSWORD);             // Aquí es donde siempre retorna null
         // Si hay más de 2 columnas, quiere decir que sí hay info de la cita
-        if (columnCount > 2)
+        if (datos != null && datos.Tables[0].Columns.Count > 2)
         {
             // Obtenemos datos ratornados por WS
             DataRowCollection drc = datos.Tables[0].Rows;
