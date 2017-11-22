@@ -101,7 +101,7 @@ public partial class Servicios_Afiliados_ConsultaCitas : System.Web.UI.Page
             foreach (DataRow dr in drc)
             {
                 // Los parámetros son: Fecha, Unidad, Paciente y clínica
-                dataTable.Rows.Add(dr[1], dr[0], dr[5], " - ");
+                dataTable.Rows.Add(dr[1], dr[0], dr[3], " - ");
             }
             // Agregamos información obtenida en dataSet y luego en dataGrid
             dataToReturn.Tables.Add(dataTable);
@@ -110,7 +110,7 @@ public partial class Servicios_Afiliados_ConsultaCitas : System.Web.UI.Page
             gridCitas.Visible = true;
 
             // Mostramos nombre y labels
-            lblNombreAfiliado.Text = drc[0][5].ToString();
+            lblNombreAfiliado.Text = drc[0][3].ToString();
             lbltxtNomAfiliado.Visible = true;
             lblNombreAfiliado.Visible = true;
             lblSinResultados.Visible = false;
