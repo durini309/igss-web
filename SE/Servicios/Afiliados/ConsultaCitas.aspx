@@ -92,8 +92,9 @@
                 <td>
                     <asp:Label ID="lblSedes" runat="server" Text="Unidad médica: "></asp:Label></td>
                 <asp:HiddenField ID="codigoSede" runat="server" />
-                <td>
-                    <asp:TextBox ID="txtSede" runat="server" MaxLength="12"></asp:TextBox>
+                <td style="width: 416px">
+                    <asp:TextBox ID="txtSede" runat="server" MaxLength="255" Style="text-transform: uppercase;"
+                        Width="243px" TextMode="MultiLine" Wrap="False" onmouseover='this.title=this.value'></asp:TextBox>
                     <asp:RequiredFieldValidator ID="reqvSede" runat="server" ControlToValidate="txtSede"
                         ErrorMessage="Dato requerido" Display="Dynamic"></asp:RequiredFieldValidator>
                 </td>

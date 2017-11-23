@@ -2,16 +2,6 @@
 <wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://localhost/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://localhost/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://localhost/">
-      <s:element name="HelloWorld">
-        <s:complexType />
-      </s:element>
-      <s:element name="HelloWorldResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="DatosUnidades">
         <s:complexType>
           <s:sequence>
@@ -37,7 +27,7 @@
       <s:element name="DatosCitas">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="numero_afiliado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="cod_unidad" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
@@ -80,12 +70,6 @@
       </s:element>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="HelloWorldSoapIn">
-    <wsdl:part name="parameters" element="tns:HelloWorld" />
-  </wsdl:message>
-  <wsdl:message name="HelloWorldSoapOut">
-    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
-  </wsdl:message>
   <wsdl:message name="DatosUnidadesSoapIn">
     <wsdl:part name="parameters" element="tns:DatosUnidades" />
   </wsdl:message>
@@ -105,10 +89,6 @@
     <wsdl:part name="parameters" element="tns:ExisteFormularioResponse" />
   </wsdl:message>
   <wsdl:portType name="WSMediConsultaSoap">
-    <wsdl:operation name="HelloWorld">
-      <wsdl:input message="tns:HelloWorldSoapIn" />
-      <wsdl:output message="tns:HelloWorldSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="DatosUnidades">
       <wsdl:input message="tns:DatosUnidadesSoapIn" />
       <wsdl:output message="tns:DatosUnidadesSoapOut" />
@@ -124,15 +104,6 @@
   </wsdl:portType>
   <wsdl:binding name="WSMediConsultaSoap" type="tns:WSMediConsultaSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="HelloWorld">
-      <soap:operation soapAction="http://localhost/HelloWorld" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="DatosUnidades">
       <soap:operation soapAction="http://localhost/DatosUnidades" style="document" />
       <wsdl:input>
@@ -163,15 +134,6 @@
   </wsdl:binding>
   <wsdl:binding name="WSMediConsultaSoap12" type="tns:WSMediConsultaSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="HelloWorld">
-      <soap12:operation soapAction="http://localhost/HelloWorld" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="DatosUnidades">
       <soap12:operation soapAction="http://localhost/DatosUnidades" style="document" />
       <wsdl:input>

@@ -21,11 +21,14 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
 
     /////
     /// <summary>
-    /// Método llamado cuando se desea hacer la consulta de citas
+    /// Método llamado cuando se desea hacer la validación de formularios
     /// Se obtienen los siguientes datos de la vista: 
     /// @param numeroIdentificacion: DPI o No de Afiliado
     /// @param sedeSeleccionada: ID de sede seleccionada
-    /// @return Datagrid con citas o mensaje de data vacía
+    /// @param numeroFormulario: numero del formulario
+    /// @param formularioSeleccionado: tipo de formulario SP-60 o SP-231
+    /// @param fechaFormulario: fecha del formulario
+    /// @return formulario válido o no válido
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
@@ -78,6 +81,7 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
     /// <param name="tipoForm">ID de tipo de formulario seleccionado</param>
     /// <param name="numForm">ID de formulario</param>
     /// <param name="numID">Numero de identificación del usuario</param>
+    /// <param name="fechaForm">Fecha del formulario</param>
     private void consultaFormulario(string sede, string numForm, string fechaForm, string numId, string tipoForm)
     {
         // lógica de llamada del WS
@@ -100,6 +104,10 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
         pnlFormulario.Visible = true;
     }
 
+    /// <summary>
+    /// Método que retorna Dataset a mostrar cuando formulario es válido
+    /// </summary>
+    /// <returns></returns>
     private DataSet formularioExitoso()
     {
         DataSet dataDummie = new DataSet();
@@ -110,6 +118,10 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
         return dataDummie;
     }
 
+    /// <summary>
+    /// Método que retorna Dataset a mostrar cuando formulario es no válido
+    /// </summary>
+    /// <returns></returns>
     private DataSet formularioNoExitoso()
     {
         DataSet dataDummie = new DataSet();
@@ -120,6 +132,10 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
         return dataDummie;
     }
 
+    /// <summary>
+    /// Método que muestra error en caso de ser necesario
+    /// </summary>
+    /// <returns></returns>
     private void mostrarError(string error)
     {
         string script = "alert(\"" + error + "\");";
@@ -127,6 +143,12 @@ public partial class Servicios_Afiliados_ConsultaFormularios : System.Web.UI.Pag
                               "ServerControlScript", script, true);
     }
 
+    /// <summary>
+    /// Función que convierte las filas "rows" en un formato JSON, para 
+    /// luego poder retornar este a la vista (Ajax) y ser la fuente del autocomplete
+    /// </summary>
+    /// <param name="rows">Filas con unidades médicas</param>
+    /// <returns></returns>
     public static string convertSedesToJson(DataRowCollection rows)
     {
         string jsonFinal = "";
